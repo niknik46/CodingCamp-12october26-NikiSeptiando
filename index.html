@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List Life Dashboard</title>
+
+  <!-- All CSS rules live in css/style.css (Requirement 11.1). -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Application header: contains the theme toggle control (Requirement 8.1). -->
+  <header class="app-header">
+    <h1 class="app-title">To-Do List Life Dashboard</h1>
+    <button id="theme-toggle" type="button" aria-label="Toggle light and dark theme">🌗 Theme</button>
+  </header>
+
+  <!-- Main dashboard: each component owns a non-overlapping region (Requirement 12.3). -->
+  <main class="dashboard">
+
+    <!-- Clock component: live 24-hour time and date (Requirements 1.1, 1.2). -->
+    <section class="component clock" id="clock-section" aria-label="Clock">
+      <h2 class="component-title">Clock</h2>
+      <time id="clock-time" aria-live="polite">--:--:--</time>
+      <p id="clock-date">--</p>
+    </section>
+
+    <!-- Greeting component: time-of-day greeting and custom name (Requirements 2, 3). -->
+    <section class="component greeting" id="greeting-section" aria-label="Greeting">
+      <h2 id="greeting-text">Hello</h2>
+      <div class="greeting-name-control">
+        <label for="custom-name-input">Your name</label>
+        <input id="custom-name-input" type="text" maxlength="50" placeholder="Enter your name">
+        <button id="custom-name-save" type="button">Save</button>
+      </div>
+      <p id="greeting-error" class="error-message" role="alert"></p>
+    </section>
+
+    <!-- Focus Timer component: Pomodoro-style countdown (Requirements 4, 5). -->
+    <section class="component focus-timer" id="focus-timer-section" aria-label="Focus Timer">
+      <h2 class="component-title">Focus Timer</h2>
+      <p id="timer-display" class="timer-display" aria-live="polite">25:00</p>
+      <p id="timer-status" class="timer-status"></p>
+      <div class="timer-controls">
+        <button id="timer-start" type="button">Start</button>
+        <button id="timer-stop" type="button">Stop</button>
+        <button id="timer-reset" type="button">Reset</button>
+      </div>
+      <div class="duration-control">
+        <label for="focus-duration-input">Duration (min)</label>
+        <input id="focus-duration-input" type="number" min="1" max="120" value="25">
+        <button id="focus-duration-save" type="button">Set</button>
+      </div>
+      <p id="timer-error" class="error-message" role="alert"></p>
+    </section>
+
+    <!-- Task List component: to-do management (Requirement 6). -->
+    <section class="component task-list" id="task-list-section" aria-label="Task List">
+      <h2 class="component-title">Tasks</h2>
+      <form id="task-form" class="task-form">
+        <label for="task-input" class="sr-only">New task</label>
+        <input id="task-input" type="text" maxlength="255" placeholder="Add a new task...">
+        <button id="task-add" type="submit">Add</button>
+      </form>
+      <p id="task-error" class="error-message" role="alert"></p>
+      <ul id="task-list" class="tasks"></ul>
+    </section>
+
+    <!-- Quick Links component: favorite website buttons (Requirement 7). -->
+    <section class="component quick-links" id="quick-links-section" aria-label="Quick Links">
+      <h2 class="component-title">Quick Links</h2>
+      <form id="link-form" class="link-form">
+        <label for="link-label-input" class="sr-only">Label</label>
+        <input id="link-label-input" type="text" maxlength="50" placeholder="Label">
+        <label for="link-url-input" class="sr-only">URL</label>
+        <input id="link-url-input" type="url" placeholder="https://example.com">
+        <button id="link-add" type="submit">Add Link</button>
+      </form>
+      <p id="link-error" class="error-message" role="alert"></p>
+      <div id="link-list" class="links"></div>
+    </section>
+
+  </main>
+
+  <!-- Global error area for persistence failures (Requirements 9.5, 10.4). -->
+  <div id="global-error" class="global-error" role="alert" aria-live="assertive"></div>
+
+  <!--
+    All JavaScript logic lives in js/script.js (Requirement 11.2).
+    Loaded as a regular script (NOT type="module") so the app runs standalone
+    from the file:// protocol without ES module CORS restrictions (Requirement 10.2).
+  -->
+  <script src="js/script.js"></script>
+</body>
+</html>

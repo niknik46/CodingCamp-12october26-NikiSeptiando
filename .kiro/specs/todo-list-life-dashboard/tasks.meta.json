@@ -1,0 +1,447 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Create base project files": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792164719279
+      },
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792164746109
+      },
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792164925564
+      }
+    ],
+    "1.2 Set up test infrastructure": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792164720437
+      },
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792164733780
+      }
+    ],
+    "2.1 Implement serialize and deserialize pure functions": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792164720793
+      },
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792164941292
+      },
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792165168899
+      }
+    ],
+    "2.3 Implement Storage_Manager": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792164721036
+      },
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792165175257
+      },
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792166615319
+      }
+    ],
+    "3.1 Implement formatTime and formatDate pure functions": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792164721203
+      },
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167084209
+      },
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167955999
+      }
+    ],
+    "3.4 Implement Clock component and HTML markup": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792164721354
+      },
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167967496
+      },
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792168285559
+      }
+    ],
+    "4.1 Implement getGreeting and validateCustomName pure functions": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792164721569
+      },
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792168294841
+      },
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792168493653
+      }
+    ],
+    "4.4 Implement Greeting_Widget component and HTML markup": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792164721721
+      },
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792168501618
+      },
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792168965272
+      }
+    ],
+    "5.1 Implement validateFocusDuration, getTimerState, formatCountdown pure functions": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792164721864
+      }
+    ],
+    "5.5 Implement Focus_Timer component and HTML markup": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792164722090
+      }
+    ],
+    "6.1 Implement validateTaskText and createTask pure functions": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792164722214
+      }
+    ],
+    "6.5 Implement Task_List component and HTML markup": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792164722345
+      }
+    ],
+    "7.1 Implement validateLink, isValidUrl, createLink pure functions": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792164722475
+      }
+    ],
+    "7.5 Implement Quick_Links component and HTML markup": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792164722605
+      }
+    ],
+    "8.1 Implement validateTheme pure function": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792164722737
+      }
+    ],
+    "8.4 Implement Theme_Manager component and HTML markup": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792164722909
+      }
+    ],
+    "9. Checkpoint - ensure all tests pass": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792164723050
+      },
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167072682
+      }
+    ],
+    "10.1 Implement Bootstrap/init entry point": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792164723175
+      }
+    ],
+    "11.1 Implement css/style.css": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792164723328
+      }
+    ],
+    "12. Final checkpoint - ensure all tests pass": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792164723520
+      },
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167072515
+      }
+    ],
+    "1. Set up project structure and test infrastructure": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792164925777
+      }
+    ],
+    "2. Implement Storage layer": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792166615543
+      }
+    ],
+    "2.2 Write property test for serialization round-trip": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167041862
+      }
+    ],
+    "2.4 Write unit tests for storage defaults": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167048380
+      }
+    ],
+    "3.3 Write property test for date formatting": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167061105
+      }
+    ],
+    "4.2 Write property test for greeting mapping": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167061370
+      }
+    ],
+    "3.2 Write property test for time formatting": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167061491
+      }
+    ],
+    "4.5 Write unit test for greeting display by hour": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167061627
+      }
+    ],
+    "4.3 Write property test for custom name validation": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167061797
+      }
+    ],
+    "5.4 Write property test for countdown formatting": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167061944
+      }
+    ],
+    "5.3 Write property test for timer state machine": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167062134
+      }
+    ],
+    "5.2 Write property test for focus duration validation": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167062286
+      }
+    ],
+    "5.6 Write unit test for focus duration default": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167062480
+      }
+    ],
+    "6.4 Write property test for task removal by ID": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167062870
+      }
+    ],
+    "6.6 Write unit test for task list default": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167063063
+      }
+    ],
+    "6.3 Write property test for task toggle involution": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167063241
+      }
+    ],
+    "7.4 Write property test for link count cap": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167063405
+      }
+    ],
+    "7.2 Write property test for link validation": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167063555
+      }
+    ],
+    "8.2 Write property test for theme toggle": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167063743
+      }
+    ],
+    "7.3 Write property test for link removal by ID": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167063911
+      }
+    ],
+    "6.2 Write property test for task text validation": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167064062
+      }
+    ],
+    "8.3 Write property test for theme validation": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167064208
+      }
+    ],
+    "10.2 Write integration test for clock interval update": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167064403
+      }
+    ],
+    "8.5 Write unit test for theme default": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167064559
+      }
+    ],
+    "10.3 Write integration tests for persistence round-trips": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167064732
+      }
+    ],
+    "10.4 Write integration tests for storage failure paths": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167064892
+      }
+    ],
+    "10.5 Write integration test for link open": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167065031
+      }
+    ],
+    "10.6 Write smoke tests": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167065159
+      }
+    ],
+    "11.2 Write performance and visual tests": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792167065356
+      }
+    ],
+    "3. Implement Clock logic and component": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792168285736
+      }
+    ],
+    "4. Implement Greeting logic and component": [
+      {
+        "executionId": "81dfd79d-17a6-4ae0-8404-4c9778c36009",
+        "chatSessionId": "sess_c39ee38f-e485-4c8c-aa3a-2c4805237d5e",
+        "timestamp": 1792168965442
+      }
+    ]
+  }
+}

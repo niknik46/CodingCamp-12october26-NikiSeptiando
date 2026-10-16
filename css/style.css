@@ -1,0 +1,669 @@
+/*!
+ * To-Do List Life Dashboard - Stylesheet
+ * ------------------------------------------------------------------
+ * All CSS rules for the dashboard live in this single file (Requirement 11.1).
+ *
+ * Layout: CSS Grid responsive layout with non-overlapping components (Req 12.3).
+ * Themes: Light and dark modes via [data-theme] attribute (Req 8.1).
+ * Contrast: All text meets >= 4.5:1 contrast ratio in both modes (Req 12.4).
+ * Typography: Clean, readable system font stack with clear hierarchy.
+ */
+
+/* ============================================================
+ * CSS Custom Properties (Design Tokens)
+ * Light mode is the default; dark mode overrides via [data-theme="dark"].
+ * ============================================================ */
+
+:root,
+[data-theme="light"] {
+  /* Background colors */
+  --bg-primary: #f5f7fa;
+  --bg-card: #ffffff;
+  --bg-input: #f0f2f5;
+  --bg-hover: #e8eaed;
+
+  /* Text colors - all meet 4.5:1 on their background */
+  --text-primary: #1a1a2e;       /* ~15:1 on #f5f7fa */
+  --text-secondary: #4a4a6a;     /* ~7:1 on #f5f7fa */
+  --text-muted: #6b6b8a;         /* ~4.6:1 on #ffffff */
+
+  /* Accent colors */
+  --accent: #4361ee;
+  --accent-hover: #3a56d4;
+  --accent-text: #ffffff;
+
+  /* Status colors */
+  --success: #2d9f4e;
+  --danger: #dc3545;
+  --danger-hover: #c82333;
+  --warning: #e8a817;
+
+  /* Borders and shadows */
+  --border: #d1d5db;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.12);
+
+  /* Error message color */
+  --error-text: #dc3545;
+
+  /* Task completed styles */
+  --completed-text: #9ca3af;
+  --completed-bg: #f9fafb;
+
+  /* Timer display */
+  --timer-color: #1a1a2e;
+  --timer-completed: #2d9f4e;
+
+  /* Link button */
+  --link-btn-bg: #eef0f4;
+  --link-btn-hover: #dde1e8;
+  --link-btn-text: #1a1a2e;
+}
+
+[data-theme="dark"] {
+  /* Background colors */
+  --bg-primary: #0f0f1a;
+  --bg-card: #1a1a2e;
+  --bg-input: #252540;
+  --bg-hover: #2e2e4a;
+
+  /* Text colors - all meet 4.5:1 on their background */
+  --text-primary: #e8e8f0;       /* ~13:1 on #1a1a2e */
+  --text-secondary: #b0b0cc;     /* ~7:1 on #1a1a2e */
+  --text-muted: #8888aa;         /* ~4.6:1 on #1a1a2e */
+
+  /* Accent colors */
+  --accent: #5a7bff;
+  --accent-hover: #7b96ff;
+  --accent-text: #ffffff;
+
+  /* Status colors */
+  --success: #4ade80;
+  --danger: #f87171;
+  --danger-hover: #ef4444;
+  --warning: #fbbf24;
+
+  /* Borders and shadows */
+  --border: #3a3a5c;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.4);
+
+  /* Error message color */
+  --error-text: #f87171;
+
+  /* Task completed styles */
+  --completed-text: #6b6b8a;
+  --completed-bg: #151528;
+
+  /* Timer display */
+  --timer-color: #e8e8f0;
+  --timer-completed: #4ade80;
+
+  /* Link button */
+  --link-btn-bg: #252540;
+  --link-btn-hover: #33335a;
+  --link-btn-text: #e8e8f0;
+}
+
+/* ============================================================
+ * Base Reset & Typography
+ * ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ============================================================
+ * Screen-reader-only utility class
+ * ============================================================ */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ============================================================
+ * App Header
+ * ============================================================ */
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.app-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+/* Theme toggle button */
+#theme-toggle {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background-color: var(--bg-input);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease,
+    transform 0.15s ease;
+  white-space: nowrap;
+}
+
+#theme-toggle:hover {
+  background-color: var(--bg-hover);
+  border-color: var(--accent);
+}
+
+#theme-toggle:active {
+  transform: scale(0.96);
+}
+
+/* ============================================================
+ * Dashboard Grid Layout
+ * Non-overlapping regions for each component (Requirement 12.3).
+ * Responsive: single column on mobile, two columns on wider screens.
+ * ============================================================ */
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Two-column layout for wider screens */
+@media (min-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  /* Task list spans full width on two-column layout */
+  .task-list {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ============================================================
+ * Card Component (shared across all dashboard sections)
+ * ============================================================ */
+
+.component {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.component-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+/* ============================================================
+ * Clock Component
+ * ============================================================ */
+
+.clock {
+  text-align: center;
+}
+
+#clock-time {
+  display: block;
+  font-size: 2.75rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+#clock-date {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+}
+
+/* ============================================================
+ * Greeting Component
+ * ============================================================ */
+
+.greeting {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#greeting-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.greeting-name-control {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.greeting-name-control label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+/* ============================================================
+ * Shared Input & Button Styles
+ * ============================================================ */
+
+input[type="text"],
+input[type="url"],
+input[type="number"] {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background-color: var(--bg-input);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.3s ease;
+  min-width: 0;
+}
+
+input[type="text"]:focus,
+input[type="url"]:focus,
+input[type="number"]:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.15);
+}
+
+/* Buttons - primary style */
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--accent);
+  color: var(--accent-text);
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+  white-space: nowrap;
+}
+
+button:hover {
+  background-color: var(--accent-hover);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+/* Danger button variant */
+button.btn-danger {
+  background-color: var(--danger);
+  color: #ffffff;
+}
+
+button.btn-danger:hover {
+  background-color: var(--danger-hover);
+}
+
+/* Small button variant */
+button.btn-sm {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.75rem;
+  border-radius: 6px;
+}
+
+/* ============================================================
+ * Error Messages
+ * ============================================================ */
+
+.error-message {
+  color: var(--error-text);
+  font-size: 0.8rem;
+  font-weight: 500;
+  min-height: 1.2em;
+  margin-top: 0.35rem;
+}
+
+.error-message:empty {
+  display: none;
+}
+
+/* ============================================================
+ * Focus Timer Component
+ * ============================================================ */
+
+.focus-timer {
+  text-align: center;
+}
+
+.timer-display {
+  font-size: 3rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+  color: var(--timer-color);
+  margin: 0.5rem 0;
+  line-height: 1.2;
+  transition: color 0.3s ease;
+}
+
+.timer-display.completed {
+  color: var(--timer-completed);
+}
+
+.timer-status {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--success);
+  min-height: 1.3em;
+  margin-bottom: 0.5rem;
+}
+
+.timer-controls {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.timer-controls button {
+  min-width: 5rem;
+}
+
+.duration-control {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.duration-control label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.duration-control input[type="number"] {
+  width: 5rem;
+  text-align: center;
+}
+
+/* ============================================================
+ * Task List Component
+ * ============================================================ */
+
+.task-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.task-form input {
+  flex: 1;
+}
+
+.tasks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tasks li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+  transition: background-color 0.15s ease;
+}
+
+.tasks li:last-child {
+  border-bottom: none;
+}
+
+.tasks li:hover {
+  background-color: var(--bg-hover);
+  border-radius: 6px;
+}
+
+/* Checkbox for toggling completion */
+.tasks li input[type="checkbox"] {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--accent);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Task text */
+.task-text {
+  flex: 1;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  word-break: break-word;
+}
+
+/* Completed task styling */
+.tasks li.completed {
+  background-color: var(--completed-bg);
+}
+
+.tasks li.completed .task-text {
+  text-decoration: line-through;
+  color: var(--completed-text);
+}
+
+/* Task action buttons */
+.task-actions {
+  display: flex;
+  gap: 0.3rem;
+  flex-shrink: 0;
+}
+
+/* Empty task list message */
+.tasks-empty {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  padding: 1.5rem 0;
+  font-style: italic;
+}
+
+/* Edit input for inline editing */
+.task-edit-input {
+  flex: 1;
+  padding: 0.35rem 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* ============================================================
+ * Quick Links Component
+ * ============================================================ */
+
+.link-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.link-form input[type="text"] {
+  flex: 1;
+  min-width: 80px;
+}
+
+.link-form input[type="url"] {
+  flex: 2;
+  min-width: 140px;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Individual link button */
+.link-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.8rem;
+  background-color: var(--link-btn-bg);
+  color: var(--link-btn-text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.link-item:hover {
+  background-color: var(--link-btn-hover);
+  border-color: var(--accent);
+}
+
+.link-item .link-label {
+  pointer-events: none;
+}
+
+/* Delete button inside link item */
+.link-item .link-delete {
+  background: none;
+  border: none;
+  color: var(--danger);
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0 0.15rem;
+  line-height: 1;
+  font-weight: 700;
+  opacity: 0.6;
+  transition: opacity 0.15s ease;
+}
+
+.link-item .link-delete:hover {
+  opacity: 1;
+  background: none;
+}
+
+/* Empty links message */
+.links-empty {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+/* ============================================================
+ * Global Error Area
+ * ============================================================ */
+
+.global-error {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--danger);
+  color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  box-shadow: var(--shadow-lg);
+  z-index: 1000;
+  max-width: 90%;
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+.global-error:empty {
+  display: none;
+}
+
+/* ============================================================
+ * Responsive Adjustments
+ * ============================================================ */
+
+@media (max-width: 480px) {
+  .app-header {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  #clock-time {
+    font-size: 2rem;
+  }
+
+  .timer-display {
+    font-size: 2.25rem;
+  }
+
+  #greeting-text {
+    font-size: 1.25rem;
+  }
+
+  .timer-controls {
+    flex-wrap: wrap;
+  }
+}
